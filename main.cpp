@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 void convert(string, string);
@@ -34,11 +35,18 @@ int main(int argc, char** argv) {
 }
 
 void convert(string link, string directory) {
+  #ifdef _WIN32
+    replace(directory.begin(), directory.end(), '\\', '/');
+  #endif
+
   if(directory.length() > 0 && directory[directory.length() - 1] != '/')
     directory += '/';
+
+  cout << directory << endl;
+
   string command =
-    "yt-dlp -f \'ba\' -x --audio-format mp3 "
+    "yt-dlp -f bestaudio -x --audio-format mp3 "
     + string(link)
-    + " -o \'" + directory + "%(title)s.%(ext)s\'";
+    + " -o \"" + directory + "%(title)s.%(ext)s\"";
   system(command.c_str());
 }
