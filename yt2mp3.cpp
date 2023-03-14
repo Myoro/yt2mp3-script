@@ -28,8 +28,8 @@ int main(int argc, char** argv) {
         system("cls");
       #endif
       cout << "yt2mp3 ~ Command line YouTube to MP3" << endl;
-      cout << "yt2mp3 <link>              -     Convert to current directory" << endl;
-      cout << "yt2mp3 <link> <directory>  -     Convert to specified directory" << endl;
+      cout << "yt2mp3 <link>              -  Convert to current directory" << endl;
+      cout << "yt2mp3 <link> <directory>  -  Convert to specified directory" << endl;
       break;
   }
 }
