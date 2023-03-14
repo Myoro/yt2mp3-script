@@ -9,7 +9,8 @@ YouTube to MP3 script for Linux &amp; Windows
 
 # Installing on Linux
 1. Install dependencies `sudo pacman -S ffmpeg base-devel`
-2. `git clone https://github.com/Myoro/yt2mp3-script.git; cd yt2mp3-script; g++ yt2mp3.cpp -o yt2mp3`
-3. Move the executable anywhere and add the directory as a path
+2. `sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp; sudo chmod a+rx /usr/local/bin/yt-dlp`
+3. `git clone https://github.com/Myoro/yt2mp3-script.git; cd yt2mp3-script; g++ yt2mp3.cpp -o yt2mp3`
+4. Move the executable anywhere and add the directory as a path
 - `vim ~/.bashrc`
 - Add `export PATH="$HOME/.local/bin/:$PATH"`
