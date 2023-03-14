@@ -42,8 +42,6 @@ void convert(string link, string directory) {
   if(directory.length() > 0 && directory[directory.length() - 1] != '/')
     directory += '/';
 
-  cout << directory << endl;
-
   string command =
     "yt-dlp -f bestaudio -x --audio-format mp3 "
     + string(link)
