@@ -15,5 +15,6 @@ YouTube to MP3 script for Linux &amp; Windows
 # Usage
 `yt2mp3 <link>`
 - Convert to current directory
+
 `yt2mp3 <link> <directory>`
 - Convert to specified directory
